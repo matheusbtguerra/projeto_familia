@@ -1,0 +1,653 @@
+@charset "utf-8";
+
+/* @media only screen and (max-device-width: 900px) {
+ .menu} { width:600px; } */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    color: rgb(175, 238, 238);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+/* BODY */
+
+.loginho {
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.headerzin {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    transition: .5s;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    margin-right: 10%;
+}
+
+header.rolagem {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px;
+    padding: 20px 4%;
+}
+
+header.rolagem a,
+header.rolagem i {
+    color: #000000;
+    border-radius: 10px;
+}
+
+header i {
+    font-size: 30px;
+    color: #000000;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+li:hover {
+    opacity: 0.9;
+}
+
+.headerzin nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 40px;
+    position: relative;
+}
+
+.headerzin nav a::after {
+    content: " ";
+    width: 0px;
+    height: 4px;
+    background-image: linear-gradient(45deg, #00ffff, #0000FF);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.headerzin nav a:hover::after {
+    width: 30px;
+}
+
+
+
+.btn-contato button {
+    width: 120px;
+    height: 50px;
+    border: 0;
+    background-color: #00ffff;
+    color: #000000;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato:hover button {
+    width: 130px;
+    height: 60px;
+    opacity: 0.5;
+    transition: .2s;
+}
+
+.banner {
+    height: 100vh;
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/22099979-simples-quadro-armacao-projeto-para-o-negocio-apresentacao-gratis-vetor.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 4em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner h1 span {
+    color: #0000CD;
+}
+
+.spanzinho {
+    font-size: 2em;
+    color: #0000FF;
+}
+
+/* HEADER */
+
+h1,
+h2 {
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: #ffffff;
+    background-image: linear-gradient(43deg, rgb(197, 255, 255)0%, rrgb(255, 235, 235)46%, #c5ffe2 90%);
+
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 15px;
+    animation: surgir 3s ease;
+    animation-timeline: view;
+    animation-range: cover 0% cover 40%;
+}
+
+a {
+    color: #E0FFFF;
+    text-decoration: none;
+}
+
+section.modulo p {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+section.modulo h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* PARALLAX */
+section.modulo.content {
+    padding: 40px 0;
+    color: #0000CD;
+    text-align: justify;
+    font-size: 11px;
+
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h2 {
+    color: #135cee;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    text-transform: uppercase;
+    z-index: 50;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px #ffffffea, 10px 10px rgba(95, 95, 95, 0.466);
+    animation: espacamento alternate 3s infinite ease;
+}
+
+section.modulo.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%, rgba(25, 25, 112, 0.6) 100%);
+}
+
+
+section.modulo.parallax-1 {
+    background-image: url(https://github.com/EduardoL28/img/blob/main/mamistodos.jpg?raw=true);
+}
+
+section.modulo.parallax-2 {
+    background-image: url(https://github.com/EduardoL28/img/blob/main/euadm.jpg?raw=true);
+}
+
+section.modulo.parallax-3 {
+    background-image: url(https://github.com/EduardoL28/img/blob/main/irmoes.jpg?raw=true);
+}
+
+section.modulo.parallax-4 {
+    background-image: url(https://github.com/EduardoL28/img/blob/main/todosios.jpg?raw=true);
+}
+
+section.modulo.parallax-2 p {
+    width: 20%;
+    padding: 0.8%;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    text-align: center;
+    background: #fff;
+    box-shadow: -10px 10px 0px 0px #222690,
+        -20px 20px 0px 0px rgba(33, 33, 33, 0.7),
+        -30px 30px 0px 0px rgba(33, 33, 33, 0.4),
+        -40px 40px 0px 0px rgba(33, 33, 33, 0.1);
+}
+
+/* PARALLAX */
+
+/* INICIO GALERIA */
+
+.wrapper1 {
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/22099979-simples-quadro-armacao-projeto-para-o-negocio-apresentacao-gratis-vetor.jpg);
+    background-position: center;  
+}
+
+.wrapper1 p {
+    font-size: 2em;
+    text-shadow: #000000 1px 1px 4px;
+}
+
+.container3{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 2em;
+    overflow: auto;
+    padding: 0 2em;
+}
+
+img{
+    width: 100%;
+}
+
+.card1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em; 
+    margin-bottom: 2em;
+    background: #f1f1f1;
+    border-radius: 50px;
+    background: rgb(0,255,255);
+background: radial-gradient(circle, rgba(0,255,255,1) 0%, rgba(19,92,238,1) 27%, rgba(0,0,205,1) 92%);
+}
+
+.card1 h3{
+    margin-bottom: 2em;
+    color: #f1f1f1;
+}
+
+.card1 p{
+    color: #f1f1f1;
+}
+
+.card1 img{
+    height: 400px;
+    border-radius: 50px;
+}
+
+.card1:nth-child(even) img{
+    order: 2;
+}
+
+a{
+    color: #e7520c;
+    text-decoration: none;
+
+}
+
+.btn1{
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    margin-top: 2em;
+    cursor: pointer;
+    border-radius: 200px;
+}
+
+.btn1:hover{
+    opacity: 0.8;
+}
+
+.card1 div{
+    padding: 2em;
+}
+
+.galeria{
+    margin: 2em;
+    display: flex;
+    height: 20em;
+    gap: 1em;
+
+}
+
+.galeria div{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    flex: 1 ;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.galeria div:hover{
+    flex: 4;
+}
+
+.galeria:hover div:not(:hover){
+    filter: blur(5px) 
+}
+
+
+
+/* FINAL GALERIA */
+
+
+
+#carouselExampleCaptions{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#carouselExampleDark {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#carouselExampleAutoplaying {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    background-position: center;
+}
+
+/* inicio footer */
+
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+    justify-content: space-between;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+}
+
+#footer_contacts img {
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+    width: 50%;
+    box-shadow: -10px 10px 0px 0px rgba(33, 33, 33, 1),
+        -20px 20px 0px 0px rgba(33, 33, 33, 0.7),
+        -30px 30px 0px 0px rgba(33, 33, 33, 0.4);
+    border: solid 1px black;
+    border-radius: 20px;
+
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    margin-right: 5%;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: solid 2px black;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px 0px rgba(33, 33, 33, 1),
+        20px 20px 0px 0px rgba(33, 33, 33, 0.7),
+        30px 30px 0px 0px rgba(33, 33, 33, 0.4);
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+    border: solid 1px black;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+    border: solid 1px black;
+}
+
+#input_group button {
+    background-color: #00ffff;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+/* fim footer */
+
+
+/* animação letras */
+@keyframes espacamento {
+    from {
+        letter-spacing: normal;
+    }
+
+    to {
+        letter-spacing: 0.2em;
+    }
+}
+
+@media (max-width: 760px) {
+    /* paralax */
+    section.modulo.parallax {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 65vh !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    section.modulo.parallax h2 {
+        color: rgb(19, 92, 238);
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 50px;
+        text-transform: uppercase;
+        z-index: 50;
+        letter-spacing: 5px;
+        text-shadow: 5px 5px #ffffffea, 10px 10px rgba(95, 95, 95, 0.466);
+        animation: espacamento alternate 3s infinite ease;
+    }
+
+    section.modulo.parallax-2 p {
+        width: 50%;
+        padding: 0.8%;
+        color: #000;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        text-align: center;
+        background: #fff;
+        box-shadow: -10px 10px 0px 0px rgba(34, 38, 144, 1),
+            -20px 20px 0px 0px rgba(33, 33, 33, 0.7),
+            -30px 30px 0px 0px rgba(33, 33, 33, 0.4),
+            -40px 40px 0px 0px rgba(33, 33, 33, 0.1);
+    }
+
+    /* paralax */
+
+    /* footer*/
+
+    #footer_contacts img {
+        border-radius: 5px;
+        box-shadow: -10px 10px 0px 0px rgba(33, 33, 33, 1),
+            -20px 20px 0px 0px rgba(33, 33, 33, 0.7);
+        width: 70%;
+        margin-left: 20%;
+    }
+
+    #footer_subscribe {
+        width: 20%;
+    }
+    
+    #input_group input {
+        all: unset;
+        padding: 0.75rem;
+        width: 50%;
+        border: solid 1px black;
+    }
+    
+    #input_group button {
+        width: 0;
+    }
+
+    #footer_subscribe h3{
+        font-size: 20px;
+        }
+        
+    /* footer */
+}
